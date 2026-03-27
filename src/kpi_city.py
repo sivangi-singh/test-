@@ -1,7 +1,13 @@
 import sqlite3
 import os
 
+ALLOWED_CITIES = {"Mumbai", "Delhi", "Bangalore", "Kolkata"}
+
 def city_kpi(city: str):
+    if city not in ALLOWED_CITIES:
+        print(f"Error: City '{city}' is not allowed. Allowed cities: {', '.join(sorted(ALLOWED_CITIES))}")
+        return
+    
     db_path = os.path.join('data', 'db', 'analytics.db')
     
     conn = sqlite3.connect(db_path)
@@ -34,3 +40,4 @@ def city_kpi(city: str):
 if __name__ == "__main__":
     city_kpi("Mumbai")
     city_kpi("Mumbai' OR 1=1 --")
+    city_kpi("London")  # Test unknown city rejection
