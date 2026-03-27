@@ -1,0 +1,11 @@
+customer_id,city,monthly_spend,churned
+1,Mumbai,1500.50,0
+2,Delhi,2300.75,0
+3,Mumbai,800.25,1
+4,Bangalore,3200.00,0
+5,Delhi,1200.50,1
+6,Mumbai,4500.25,0
+7,Kolkata,950.75,0
+8,Bangalore,1800.00,1
+9,Delhi,2750.50,0
+10,Mumbai,1350.25,0
